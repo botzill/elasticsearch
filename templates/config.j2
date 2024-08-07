@@ -53,10 +53,10 @@ http:
 xpack:
   security:
     enabled: {{ elasticsearch_xpack_security_enabled | lower }}
-  transport:
-    ssl:
-      enabled: true
-      verification_mode: none
+    transport:
+      ssl:
+        enabled: true
+        verification_mode: none
 {% endif %}
 {% if elasticsearch_indicies_query_bool_max_clause_count | default(False) %}
 indices.query.bool.max_clause_count: {{ elasticsearch_indicies_query_bool_max_clause_count }}
